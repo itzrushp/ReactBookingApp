@@ -71,7 +71,7 @@ export const countByType = async (req, res , next)=>{
           {type:"villas",count:villaCount},
           {type:"cabins",count:cabinCount},
 
-        ]);
+        ]); 
       } catch (err) {
         next(err);
       }
