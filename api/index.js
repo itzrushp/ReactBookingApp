@@ -6,7 +6,7 @@ import usersRoute from "./routes/users.js";
 import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
-// import cors from "cors";
+import cors from "cors";
 
 const app = express();
 dotenv.config();
@@ -30,7 +30,12 @@ mongoose.connection.on("connected", () => {
 
 //middlewares
 app.use(cookieParser());
-// app.use(cors());
+
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
