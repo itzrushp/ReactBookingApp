@@ -1,94 +1,32 @@
-/* Reset and basic styling
-  
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .login {
-    width: 100%;
-    height: auto; 
-    padding-top: 60px;
-  }
-  
-  
-  .lContainer {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .lContainer:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  }
-  
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  .lInput {
-    width: 100%;
-    padding: 12px 15px;
-    margin: 15px 0;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    outline: none;
-    font-size: 14px;
-    transition: 0.3s;
-    background-color: #fafafa;
-  }
-  
-  .lInput:focus {
-    border-color: #6c63ff;
-    background-color: #ffffff;
-    box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
-  }
-  
-  
-  .lButton {
-    width: 100%;
-    padding: 12px 15px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 10px;
-    background-color: #6c63ff;
-    color: #ffffff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-weight: 500;
-  }
-  
-  .lButton:hover {
-    background-color: #5848c2;
-    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
-    transform: translateY(-2px);
-  }
-  
- 
-  span {
-    display: block;
-    color: #ff4d4d;
-    margin-top: 15px;
-    font-size: 14px;
-  }
-  
-  
-  span::before {
-    content: '⚠️ ';
-  }
-  
-   
-  @keyframes popIn {
-    0% {
-      transform: scale(0.95);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  .lContainer {
-    animation: popIn 0.5s ease-out;
-  }
- */
+.lInput{
+  height: 30px;
+  padding: 10px;
+}
+
+.lButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lButton:disabled{
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
